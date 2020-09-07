@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<!--hello 第一个Thymeleaf程序
+<div th:text="${name}">name是bigsai(我是离线数据)</div>-->
+
+<h2>JavaBean对象</h2>
+<table bgcolor="#ffe4c4" border="1">
+    <tr>
+        <td>介绍</td>
+        <td th:text="${user.name}"></td>
+    </tr>
+    <tr>
+        <td>年龄</td>
+        <td th:text="${user['age']}"></td>
+    </tr>
+    <tr>
+        <td>链接</td>
+        <td><a th:href="@{index2.html}" href="/index">跳转</a></td>
+    </tr>
+    <tr>
+        <td>介绍</td>
+        <td th:text="${user.getDetail()}"></td>
+    </tr>
+</table>
+<a href="/index">跳转</a>
+</body>
+</html>
